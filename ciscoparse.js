@@ -2,7 +2,7 @@ var CiscoParse = function(data) {
   this.data = data;
 };
 
-// Returns the IOS version
+// Returns the IOS version.
 CiscoParse.prototype.version = function() {
   var result;
   var data = this.data;
@@ -23,7 +23,7 @@ CiscoParse.prototype.version = function() {
   }
 };
 
-// Returns how long the device has been up
+// Returns how long the device has been up.
 CiscoParse.prototype.uptime = function() {
   var result;
   var data = this.data;
@@ -44,7 +44,7 @@ CiscoParse.prototype.uptime = function() {
   }
 };
 
-// Returns the last reload/reboot reason
+// Returns the last reload/reboot reason.
 CiscoParse.prototype.bootReason = function() {
   var result;
   var data = this.data;
@@ -65,7 +65,7 @@ CiscoParse.prototype.bootReason = function() {
   }
 };
 
-// Returns the amount of memory installed on the device
+// Returns the amount of memory installed on the device.
 CiscoParse.prototype.memory = function() {
   var result;
   var data = this.data;
@@ -86,7 +86,7 @@ CiscoParse.prototype.memory = function() {
   }
 };
 
-// Returns the device model type
+// Returns the device model type.
 CiscoParse.prototype.model = function() {
   var result;
   var data = this.data;
@@ -107,7 +107,7 @@ CiscoParse.prototype.model = function() {
   }
 };
 
-// Returns the serial number(s)
+// Returns the serial number(s).
 CiscoParse.prototype.serial = function() {
   var result = [];
   var data = this.data;
@@ -134,7 +134,7 @@ CiscoParse.prototype.serial = function() {
   }
 };
 
-// Returns a list of hardware installed, such as interfaces, etc
+// Returns a list of hardware installed, such as interfaces, etc.
 CiscoParse.prototype.hardware = function() {
   var result = [];
   var data = this.data;
