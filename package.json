@@ -1,0 +1,15 @@
+{
+    "name": "ciscoparse",
+    "version": "0.0.1",
+    "author": "Scott Ware <scottdware@gmail.com>",
+    "description": "A tool to parse output from Cisco's 'show version' command.",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/scottdware/ciscoparse.git"
+    },
+    "keywords": ["cisco", "version", "parse", "networking"],
+    "license": "MIT http://www.opensource.org/licenses/mit-license.php",
+    "engine": {
+        "node": "*"
+    }
+}
