@@ -11,5 +11,6 @@
     "license": "MIT http://www.opensource.org/licenses/mit-license.php",
     "engine": {
         "node": "*"
-    }
+    },
+    "main": "ciscoparse"
 }
