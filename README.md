@@ -8,7 +8,7 @@ This module will parse the output from Cisco's `show version` command.
 
 ## Usage ##
 
-Information that will be parsed:
+Information that can be parsed:
 
 - IOS Version
 - Uptime
