@@ -42,7 +42,9 @@ For the `serial()` method, if there is more than one switch (i.e. a 3750 switch
 stack), the serial numbers are stored in an array, and when printed to the console,
 are displayed one right after the other:
 
+~~~javascript
     console.log('Serials: ' + parser.serial());
+~~~
 
 Would print out the following:
 
