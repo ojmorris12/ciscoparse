@@ -8,7 +8,10 @@
         "url": "http://github.com/scottdware/ciscoparse.git"
     },
     "keywords": ["cisco", "version", "parse", "networking"],
-    "license": "MIT http://www.opensource.org/licenses/mit-license.php",
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://www.opensource.org/licenses/mit-license.php"
+    }],
     "engine": {
         "node": "*"
     },
