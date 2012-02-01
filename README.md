@@ -2,15 +2,13 @@
 
 This module will parse the output from Cisco's `show version` command.
 
-## Installation ##
-
-To install this app via [npm](http://npmjs.org), run the following command:
+## Installation  ##
 
     npm install ciscoparse
 
 ## Usage ##
 
-Listed below are all the types of information that you can currently parse:
+Information that will be parsed:
 
 - IOS Version
 - Uptime
