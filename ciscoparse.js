@@ -1,6 +1,6 @@
-var CiscoParse = function(data) {
+function CiscoParse(data) {
   this.data = data;
-};
+}
 
 // Returns the IOS version.
 CiscoParse.prototype.version = function() {
