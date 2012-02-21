@@ -1,7 +1,7 @@
 var CiscoParse = require('../ciscoparse.js');
 var fs = require('fs');
 
-fs.readFile('show-version.txt', function(err, data) {
+fs.readFile('show-version.txt', function (err, data) {
   if (err) throw err;
   var parser = new CiscoParse(data);
 
