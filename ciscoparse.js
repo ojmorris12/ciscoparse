@@ -1,13 +1,13 @@
-function CiscoParse(data) {
+var CiscoParse = function (data) {
   this.data = data;
 }
 
 // Returns the IOS version.
-CiscoParse.prototype.version = function() {
+CiscoParse.prototype.version = function () {
   var result;
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*Version ([\d\.]+\([A-Za-z\d]+\)[A-Za-z\d]*)\,.*$/;
     var match = re.exec(line);
 
@@ -24,11 +24,11 @@ CiscoParse.prototype.version = function() {
 };
 
 // Returns how long the device has been up.
-CiscoParse.prototype.uptime = function() {
+CiscoParse.prototype.uptime = function () {
   var result;
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*uptime.*is (.*)$/;
     var match = re.exec(line);
 
@@ -45,11 +45,11 @@ CiscoParse.prototype.uptime = function() {
 };
 
 // Returns the last reload/reboot reason.
-CiscoParse.prototype.bootReason = function() {
+CiscoParse.prototype.bootReason = function () {
   var result;
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*(returned to ROM|restarted) by (.*)$/;
     var match = re.exec(line);
 
@@ -66,11 +66,11 @@ CiscoParse.prototype.bootReason = function() {
 };
 
 // Returns the amount of memory installed on the device.
-CiscoParse.prototype.memory = function() {
+CiscoParse.prototype.memory = function () {
   var result;
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*with (.*) bytes.*$/;
     var match = re.exec(line);
 
@@ -87,11 +87,11 @@ CiscoParse.prototype.memory = function() {
 };
 
 // Returns the device model type.
-CiscoParse.prototype.model = function() {
+CiscoParse.prototype.model = function () {
   var result;
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^[Cc]isco ([-A-Z\d\/]+) .*bytes.*$/;
     var match = re.exec(line);
 
@@ -108,11 +108,11 @@ CiscoParse.prototype.model = function() {
 };
 
 // Returns the serial number(s).
-CiscoParse.prototype.serial = function() {
+CiscoParse.prototype.serial = function () {
   var result = [];
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re1 = /.*Processor board ID ([A-Za-z\d]+)$/;
     var re2 = /.*System serial number.* ([A-Za-z\d]+)$/;
     var match1 = re1.exec(line);
@@ -135,11 +135,11 @@ CiscoParse.prototype.serial = function() {
 };
 
 // Returns a list of hardware installed, such as interfaces, etc.
-CiscoParse.prototype.hardware = function() {
+CiscoParse.prototype.hardware = function () {
   var result = [];
   var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function(line) {
+  data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^([\d]+\s+.*)$/;
     var match = re.exec(line);
 
