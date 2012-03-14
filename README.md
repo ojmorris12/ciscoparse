@@ -54,7 +54,7 @@ The same thing applies to the `hardware()` method.
 
 ## Issues ##
 
-- This currently will **NOT** work with any Nexus (NX-OS) devices.
+- This currently will **NOT** work with any Nexus (NX-OS, 7k's, 5k's) devices.
 
 ## License ##
 
