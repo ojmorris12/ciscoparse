@@ -10,7 +10,7 @@ This module will parse the output from Cisco's `show version` command.
 
 Information that can be parsed:
 
-- IOS Version
+- IOS/NX-OS Software Version
 - Uptime
 - Last boot reason
 - Memory
@@ -51,10 +51,6 @@ Would print out the following:
     Serials: CAT0000000A,CAT0000000B,CAT0000000C
 
 The same thing applies to the `hardware()` method.
-
-## Issues ##
-
-- This currently will **NOT** work with any Nexus (NX-OS, 7k's, 5k's) devices.
 
 ## License ##
 
