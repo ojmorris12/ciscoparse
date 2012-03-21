@@ -1,4 +1,4 @@
-c982n7k1admin# sh version
+nexus-7k# sh version
 Cisco Nexus Operating System (NX-OS) Software
 TAC support: http://www.cisco.com/tac
 Documents: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html
@@ -28,7 +28,7 @@ Hardware
   Intel(R) Xeon(R) CPU         with 8260944 kB of memory.
   Processor Board ID JAF1534AAKG
 
-  Device name: c982n7k1admin
+  Device name: nexus-7k
   bootflash:    2029608 kB
   slot0:              0 kB (expansion flash)
 
@@ -58,4 +58,4 @@ CMP (Module 6) ok
   CMP BIOS compile time:   8/ 4/2008 19:39:40
   CMP Image compile time:  12/15/2011 12:00:00
 
-c982n7k1admin#
+nexus-7k#

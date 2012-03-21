@@ -1,4 +1,4 @@
-c985ncore1-5k# sh ver
+nexus-5k# sh ver
 Cisco Nexus Operating System (NX-OS) Software
 TAC support: http://www.cisco.com/tac
 Copyright (c) 2002-2011, Cisco Systems, Inc. All rights reserved.
@@ -29,7 +29,7 @@ Hardware
   Intel(R) Xeon(R) CPU         with 8299528 kB of memory.
   Processor Board ID FOC15325BKY
 
-  Device name: c985ncore1-5k
+  Device name: nexus-5k
   bootflash:    2007040 kB
 
 Kernel uptime is 56 day(s), 0 hour(s), 47 minute(s), 9 second(s)
@@ -41,4 +41,4 @@ Last reset
 
 plugin
   Core Plugin, Ethernet Plugin
-c985ncore1-5k#
+nexus-5k#
