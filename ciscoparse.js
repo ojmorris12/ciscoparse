@@ -19,7 +19,7 @@ CiscoParse.prototype.version = function () {
   if (result) {
     return result.trim();
   } else {
-    return 'N/A';
+    return null;
   }
 };
 
@@ -40,7 +40,7 @@ CiscoParse.prototype.uptime = function () {
   if (result) {
     return result.trim();
   } else {
-    return 'N/A';
+    return null;
   }
 };
 
@@ -61,7 +61,7 @@ CiscoParse.prototype.bootReason = function () {
   if (result) {
     return result.trim();
   } else {
-    return 'N/A';
+    return null;
   }
 };
 
@@ -82,7 +82,7 @@ CiscoParse.prototype.memory = function () {
   if (result) {
     return result.trim();
   } else {
-    return 'N/A';
+    return null;
   }
 };
 
@@ -103,7 +103,7 @@ CiscoParse.prototype.model = function () {
   if (result) {
     return result.trim();
   } else {
-    return 'N/A';
+    return null;
   }
 };
 
