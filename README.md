@@ -28,7 +28,7 @@ var fs = require('fs');
 fs.readFile('show-version.txt', function(err, data) {
   var parser = new CiscoParse(data);
 
-  console.log('IOS: ' + parser.version());
+  console.log('Version: ' + parser.version());
   console.log('Uptime: ' + parser.uptime());
   console.log('Boot Reason: ' + parser.bootReason());
   console.log('Memory: ' + parser.memory());
