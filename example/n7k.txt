@@ -1,0 +1,61 @@
+c982n7k1admin# sh version
+Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Documents: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html
+Copyright (c) 2002-2011, Cisco Systems, Inc. All rights reserved.
+The copyrights to certain works contained in this software are
+owned by other third parties and used and distributed under
+license. Certain components of this software are licensed under
+the GNU General Public License (GPL) version 2.0 or the GNU
+Lesser General Public License (LGPL) Version 2.1. A copy of each
+such license is available at
+http://www.opensource.org/licenses/gpl-2.0.php and
+http://www.opensource.org/licenses/lgpl-2.1.php
+
+Software
+  BIOS:      version 3.22.0
+  kickstart: version 5.2(3a)
+  system:    version 5.2(3a)
+  BIOS compile time:       02/20/10
+  kickstart image file is: bootflash:///n7000-s1-kickstart.5.2.3a.bin
+  kickstart compile time:  12/25/2020 12:00:00 [12/15/2011 22:04:59]
+  system image file is:    bootflash:///n7000-s1-dk9.5.2.3a.bin
+  system compile time:     12/15/2011 12:00:00 [12/15/2011 23:15:48]
+
+
+Hardware
+  cisco Nexus7000 C7010 (10 Slot) Chassis ("Supervisor module-1X")
+  Intel(R) Xeon(R) CPU         with 8260944 kB of memory.
+  Processor Board ID JAF1534AAKG
+
+  Device name: c982n7k1admin
+  bootflash:    2029608 kB
+  slot0:              0 kB (expansion flash)
+
+Kernel uptime is 20 day(s), 22 hour(s), 12 minute(s), 40 second(s)
+
+Last reset at 386165 usecs after  Fri Feb 24 14:23:15 2012
+
+  Reason: Reset Requested by CLI command reload
+  System version: 5.2(3a)
+  Service:
+
+plugin
+  Core Plugin, Ethernet Plugin
+
+
+CMP (Module 5) ok
+ CMP Software
+  CMP BIOS version:        02.01.05
+  CMP Image version:       5.2(1) [build 5.0(0.66)]
+  CMP BIOS compile time:   8/ 4/2008 19:39:40
+  CMP Image compile time:  12/15/2011 12:00:00
+
+CMP (Module 6) ok
+ CMP Software
+  CMP BIOS version:        02.01.05
+  CMP Image version:       5.2(1) [build 5.0(0.66)]
+  CMP BIOS compile time:   8/ 4/2008 19:39:40
+  CMP Image compile time:  12/15/2011 12:00:00
+
+c982n7k1admin#
