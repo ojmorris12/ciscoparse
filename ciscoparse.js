@@ -2,6 +2,31 @@ var CiscoParse = function (data) {
   this.data = data;
 }
 
+// Returns the device type: IOS or NX-OS.
+CiscoParse.prototype.type = function () {
+  var result;
+  var data = this.data;
+
+  data.toString().split(/\r?\n/).forEach(function (line) {
+    var re = /^Cisco.*(Nexus|IOS).*$/;
+    var match = re.exec(line);
+
+    if (match && match[1] === 'Nexus') {
+      result = 'NX-OS (Nexus)';
+    }
+
+    if (match && match[1] === 'IOS') {
+      result = match[1];
+    }
+  });
+
+  if (result) {
+    return result.trim();
+  } else {
+    return null;
+  }
+};
+
 // Returns the IOS version.
 CiscoParse.prototype.version = function () {
   var result;
