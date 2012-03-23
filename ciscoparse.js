@@ -8,7 +8,7 @@ CiscoParse.prototype.type = function () {
   var data = this.data;
 
   data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^Cisco.*(Nexus|IOS).*$/;
+    var re = /^Cisco.*(Nexus|IOS|Internetwork Operating System).*$/;
     var match = re.exec(line);
 
     if (match && match[1] === 'Nexus') {
@@ -17,6 +17,10 @@ CiscoParse.prototype.type = function () {
 
     if (match && match[1] === 'IOS') {
       result = match[1];
+    }
+
+    if (match && match[1] === 'Internetwork Operating System') {
+      result = 'IOS';
     }
   });
 
@@ -177,7 +181,7 @@ CiscoParse.prototype.hardware = function () {
   var data = this.data;
 
   data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^([\d]+\s+.*)$/i;
+    var re = /^([\d]{1,3}\s+.*)$/i;
     var match = re.exec(line);
 
     if (match) {
