@@ -10,7 +10,8 @@ This module will parse the output from Cisco's `show version` command.
 
 Information that can be parsed:
 
-- IOS/NX-OS Software Version
+- Device Type (IOS or NX-OS/Nexus)
+- Software Version
 - Uptime
 - Last boot reason
 - Memory
@@ -28,6 +29,7 @@ var fs = require('fs');
 fs.readFile('show-version.txt', function(err, data) {
   var parser = new CiscoParse(data);
 
+  console.log('Device Type: ' + parser.type());
   console.log('Version: ' + parser.version());
   console.log('Uptime: ' + parser.uptime());
   console.log('Boot Reason: ' + parser.bootReason());
