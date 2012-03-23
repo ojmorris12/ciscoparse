@@ -2,12 +2,13 @@ var CiscoParse = function (data) {
   this.data = data;
 }
 
+module.exports = CiscoParse;
+
 // Returns the device type: IOS or NX-OS.
 CiscoParse.prototype.type = function () {
   var result;
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^Cisco.*(Nexus|IOS|Internetwork Operating System).*$/;
     var match = re.exec(line);
 
@@ -29,14 +30,13 @@ CiscoParse.prototype.type = function () {
   } else {
     return null;
   }
-};
+}
 
 // Returns the IOS version.
 CiscoParse.prototype.version = function () {
   var result;
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*Version ([\d\.]+\([A-Za-z\d]+\)[A-Za-z\d]*)\,.*$/i;
     var nxRe = /^.*System version: (.*)$/i;
     var match = re.exec(line);
@@ -54,14 +54,13 @@ CiscoParse.prototype.version = function () {
   } else {
     return null;
   }
-};
+}
 
 // Returns how long the device has been up.
 CiscoParse.prototype.uptime = function () {
   var result;
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*uptime.*is (.*)$/i;
     var match = re.exec(line);
 
@@ -75,14 +74,13 @@ CiscoParse.prototype.uptime = function () {
   } else {
     return null;
   }
-};
+}
 
 // Returns the last reload/reboot reason.
 CiscoParse.prototype.bootReason = function () {
   var result;
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*(returned to ROM|restarted) by (.*)$/i;
     var nxRe = /^.*Reason: (.*)$/i;
     var match = re.exec(line);
@@ -100,14 +98,13 @@ CiscoParse.prototype.bootReason = function () {
   } else {
     return null;
   }
-};
+}
 
 // Returns the amount of memory installed on the device.
 CiscoParse.prototype.memory = function () {
   var result;
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^.*with (.*) (bytes|kb).*$/i;
     var match = re.exec(line);
 
@@ -121,14 +118,13 @@ CiscoParse.prototype.memory = function () {
   } else {
     return null;
   }
-};
+}
 
 // Returns the device model type.
 CiscoParse.prototype.model = function () {
   var result;
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^[Cc]isco ([-A-Z\d\/]+) .*bytes.*$/i;
     var nxRe = /^.*[Cc]isco (Nexus[\d]+).*$/i;
     var match = re.exec(line);
@@ -146,14 +142,13 @@ CiscoParse.prototype.model = function () {
   } else {
     return null;
   }
-};
+}
 
 // Returns the serial number(s).
 CiscoParse.prototype.serial = function () {
   var result = [];
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re1 = /.*Processor board ID ([A-Za-z\d]+)$/i;
     var re2 = /.*System serial number.* ([A-Za-z\d]+)$/i;
     var match1 = re1.exec(line);
@@ -173,14 +168,13 @@ CiscoParse.prototype.serial = function () {
   } else {
     return result;
   }
-};
+}
 
 // Returns a list of hardware installed, such as interfaces, etc.
 CiscoParse.prototype.hardware = function () {
   var result = [];
-  var data = this.data;
 
-  data.toString().split(/\r?\n/).forEach(function (line) {
+  this.data.toString().split(/\r?\n/).forEach(function (line) {
     var re = /^([\d]{1,3}\s+.*)$/i;
     var match = re.exec(line);
 
@@ -190,6 +184,4 @@ CiscoParse.prototype.hardware = function () {
   });
 
   return result;
-};
-
-module.exports = CiscoParse;
+}
