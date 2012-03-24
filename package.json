@@ -5,6 +5,10 @@
     "author": "Scott Ware <scottdware@gmail.com>",
     "keywords": ["cisco", "version", "parse", "networking"],
     "main": "ciscoparse",
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://github.com/scottdware/ciscoparse/raw/master/LICENSE"
+    }],
     "repository": {
         "type": "git",
         "url": "http://github.com/scottdware/ciscoparse.git"
