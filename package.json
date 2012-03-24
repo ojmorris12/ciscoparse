@@ -7,7 +7,7 @@
     "main": "ciscoparse",
     "licenses": [{
         "type": "MIT",
-        "url": "http://github.com/scottdware/ciscoparse/raw/master/LICENSE"
+        "url": "http://raw.github.com/scottdware/ciscoparse/master/LICENSE"
     }],
     "repository": {
         "type": "git",
