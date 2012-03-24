@@ -2,7 +2,7 @@ var CiscoParse = require('../ciscoparse.js');
 var fs = require('fs');
 
 fs.readFile(__dirname + '/ios.txt', function (err, data) {
-  var parser = new CiscoParse(data);
+  var parser = CiscoParse(data);
   console.log('Device Type: ' + parser.type());
   console.log('Version: ' + parser.version());
   console.log('Uptime: ' + parser.uptime());
@@ -15,7 +15,7 @@ fs.readFile(__dirname + '/ios.txt', function (err, data) {
 });
 
 fs.readFile(__dirname + '/n5k.txt', function (err, data) {
-  var parser = new CiscoParse(data);
+  var parser = CiscoParse(data);
   console.log('Device Type: ' + parser.type());
   console.log('Version: ' + parser.version());
   console.log('Uptime: ' + parser.uptime());
@@ -28,7 +28,7 @@ fs.readFile(__dirname + '/n5k.txt', function (err, data) {
 });
 
 fs.readFile(__dirname + '/n7k.txt', function (err, data) {
-  var parser = new CiscoParse(data);
+  var parser = CiscoParse(data);
   console.log('Device Type: ' + parser.type());
   console.log('Version: ' + parser.version());
   console.log('Uptime: ' + parser.uptime());
