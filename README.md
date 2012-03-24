@@ -1,11 +1,8 @@
 # ciscoparse #
 
-This module will parse the output from Cisco's `show version` command.
-
-There also is a web app version of this module as well, and it can be
-found [here](http://github.com/scottdware/node-ciscoparse).
-
-[Demo](http://ciscoparse.nodester.com)
+This module will parse the output from Cisco's `show version` command. There
+is a web front-end to this module as well, and it can be found
+[here](http://github.com/scottdware/node-ciscoparse).
 
 ## Installation  ##
 
