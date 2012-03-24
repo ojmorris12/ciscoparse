@@ -153,17 +153,17 @@ CiscoParse.prototype.serial = function () {
   var result = [];
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re1 = /.*Processor board ID ([A-Za-z\d]+)$/i;
-    var re2 = /.*System serial number.* ([A-Za-z\d]+)$/i;
-    var match1 = re1.exec(line);
-    var match2 = re2.exec(line);
+    var procRe = /.*Processor board ID ([A-Za-z\d]+)$/i;
+    var sysRe = /.*System serial number.* ([A-Za-z\d]+)$/i;
+    var procMatch = procRe.exec(line);
+    var sysMatch = sysRe.exec(line);
 
-    if (match1) {
-      result.push(match1[1]);
+    if (procMatch) {
+      result.push(procMatch[1]);
     }
 
-    if (match2) {
-      result.push(match2[1]);
+    if (sysMatch) {
+      result.push(sysMatch[1]);
     }
   });
 
