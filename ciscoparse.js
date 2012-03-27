@@ -13,8 +13,8 @@ CiscoParse.prototype.type = function () {
   var result;
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^Cisco.*(Nexus|IOS|Internetwork Operating System).*$/;
-    var match = re.exec(line);
+    var re = /^Cisco.*(Nexus|IOS|Internetwork Operating System).*$/,
+        match = re.exec(line);
 
     if (match && match[1] === 'Nexus') {
       result = 'NX-OS (Nexus)';
@@ -29,11 +29,7 @@ CiscoParse.prototype.type = function () {
     }
   });
 
-  if (result) {
-    return result.trim();
-  } else {
-    return null;
-  }
+  return result ? result.trim() : null;
 }
 
 // Returns the IOS version.
@@ -41,10 +37,10 @@ CiscoParse.prototype.version = function () {
   var result;
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^.*Version ([\d\.]+\([A-Za-z\d]+\)[A-Za-z\d]*)\,.*$/i;
-    var nxRe = /^.*System version: (.*)$/i;
-    var match = re.exec(line);
-    var nxMatch = nxRe.exec(line);
+    var re = /^.*Version ([\d\.]+\([A-Za-z\d]+\)[A-Za-z\d]*)\,.*$/i,
+        nxRe = /^.*System version: (.*)$/i,
+        match = re.exec(line),
+        nxMatch = nxRe.exec(line);
 
     if (match) {
       result = match[1];
@@ -53,11 +49,7 @@ CiscoParse.prototype.version = function () {
     }
   });
 
-  if (result) {
-    return result.trim();
-  } else {
-    return null;
-  }
+  return result ? result.trim() : null;
 }
 
 // Returns how long the device has been up.
@@ -65,19 +57,15 @@ CiscoParse.prototype.uptime = function () {
   var result;
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^.*uptime.*is (.*)$/i;
-    var match = re.exec(line);
+    var re = /^.*uptime.*is (.*)$/i,
+        match = re.exec(line);
 
     if (match) {
       result = match[1];
     }
   });
 
-  if (result) {
-    return result.trim();
-  } else {
-    return null;
-  }
+  return result ? result.trim() : null;
 }
 
 // Returns the last reload/reboot reason.
@@ -85,10 +73,10 @@ CiscoParse.prototype.bootReason = function () {
   var result;
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^.*(returned to ROM|restarted) by (.*)$/i;
-    var nxRe = /^.*Reason: (.*)$/i;
-    var match = re.exec(line);
-    var nxMatch = nxRe.exec(line);
+    var re = /^.*(returned to ROM|restarted) by (.*)$/i,
+        nxRe = /^.*Reason: (.*)$/i,
+        match = re.exec(line),
+        nxMatch = nxRe.exec(line);
 
     if (match) {
       result = match[2];
@@ -97,11 +85,7 @@ CiscoParse.prototype.bootReason = function () {
     }
   });
 
-  if (result) {
-    return result.trim();
-  } else {
-    return null;
-  }
+  return result ? result.trim() : null;
 }
 
 // Returns the amount of memory installed on the device.
@@ -109,19 +93,15 @@ CiscoParse.prototype.memory = function () {
   var result;
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^.*with (.*) (bytes|kb).*$/i;
-    var match = re.exec(line);
+    var re = /^.*with (.*) (bytes|kb).*$/i,
+        match = re.exec(line);
 
     if (match) {
       result = match[1];
     }
   });
 
-  if (result) {
-    return result.trim();
-  } else {
-    return null;
-  }
+  return result ? result.trim() : null;
 }
 
 // Returns the device model type.
@@ -129,10 +109,10 @@ CiscoParse.prototype.model = function () {
   var result;
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var re = /^[Cc]isco ([-A-Z\d\/]+) .*bytes.*$/i;
-    var nxRe = /^.*[Cc]isco (Nexus[\d]+).*$/i;
-    var match = re.exec(line);
-    var nxMatch = nxRe.exec(line);
+    var re = /^[Cc]isco ([-A-Z\d\/]+) .*bytes.*$/i,
+        nxRe = /^.*[Cc]isco (Nexus[\d]+).*$/i,
+        match = re.exec(line),
+        nxMatch = nxRe.exec(line);
 
     if (match) {
       result = match[1];
@@ -141,11 +121,7 @@ CiscoParse.prototype.model = function () {
     }
   });
 
-  if (result) {
-    return result.trim();
-  } else {
-    return null;
-  }
+  return result ? result.trim() : null;
 }
 
 // Returns the serial number(s).
@@ -153,10 +129,10 @@ CiscoParse.prototype.serial = function () {
   var result = [];
 
   this.data.toString().split(/\r?\n/).forEach(function (line) {
-    var procRe = /.*Processor board ID ([A-Za-z\d]+)$/i;
-    var sysRe = /.*System serial number.* ([A-Za-z\d]+)$/i;
-    var procMatch = procRe.exec(line);
-    var sysMatch = sysRe.exec(line);
+    var procRe = /.*Processor board ID ([A-Za-z\d]+)$/i,
+        sysRe = /.*System serial number.* ([A-Za-z\d]+)$/i,
+        procMatch = procRe.exec(line),
+        sysMatch = sysRe.exec(line);
 
     if (procMatch) {
       result.push(procMatch[1]);
@@ -170,7 +146,7 @@ CiscoParse.prototype.serial = function () {
   if (result.length > 1) {
     return result.splice(1);
   } else {
-    return result;
+    return result ? result : null;
   }
 }
 
@@ -187,5 +163,5 @@ CiscoParse.prototype.hardware = function () {
     }
   });
 
-  return result;
+  return result ? result : null;
 }
