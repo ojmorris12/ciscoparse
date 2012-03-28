@@ -24,7 +24,7 @@ Information that can be parsed:
 For example, let's say that you have the `show version` output from a device
 saved in a file called `show-version.txt`:
 
-~~~javascript
+```javascript
 var CiscoParse = require('ciscoparse');
 var fs = require('fs');
 
@@ -40,15 +40,15 @@ fs.readFile('show-version.txt', function(err, data) {
   console.log('Serial: ' + parser.serial());
   console.log('Hardware: ' + parser.hardware());
 });
-~~~
+```
 
 For the `serial()` method, if there is more than one switch (i.e. a 3750 switch
 stack), the serial numbers are stored in an array, and when printed to the console,
 are displayed one right after the other:
 
-~~~javascript
+```javascript
 console.log('Serials: ' + parser.serial());
-~~~
+```
 
 Would print out the following:
 
