@@ -1,9 +1,9 @@
 var CiscoParse = function (data) {
-  if (!(this instanceof arguments.callee)) {
+  if (!(this instanceof CiscoParse)) {
     return new CiscoParse(data);
-  } else {
-    this.data = data;
   }
+
+  this.data = data;
 };
 
 module.exports = CiscoParse;
