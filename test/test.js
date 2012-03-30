@@ -1,4 +1,4 @@
-var CiscoParse = require('../ciscoparse.js'),
+var CiscoParse = require('../index.js'),
     fs = require('fs'),
     data = fs.readFileSync(__dirname + '/ios.txt', 'utf-8'),
     parser = CiscoParse(data);
