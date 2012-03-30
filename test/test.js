@@ -1,40 +1,13 @@
-var CiscoParse = require('../ciscoparse.js');
-var fs = require('fs');
+var CiscoParse = require('../ciscoparse.js'),
+    fs = require('fs'),
+    data = fs.readFileSync(__dirname + '/ios.txt', 'utf-8'),
+    parser = CiscoParse(data);
 
-fs.readFile(__dirname + '/ios.txt', function (err, data) {
-  var parser = CiscoParse(data);
-  console.log('Device Type: ' + parser.type());
-  console.log('Version: ' + parser.version());
-  console.log('Uptime: ' + parser.uptime());
-  console.log('Boot Reason: ' + parser.bootReason());
-  console.log('Memory: ' + parser.memory());
-  console.log('Model: ' + parser.model());
-  console.log('Serial: ' + parser.serial());
-  console.log('Hardware: ' + parser.hardware());
-  console.log('\n');
-});
-
-fs.readFile(__dirname + '/n5k.txt', function (err, data) {
-  var parser = CiscoParse(data);
-  console.log('Device Type: ' + parser.type());
-  console.log('Version: ' + parser.version());
-  console.log('Uptime: ' + parser.uptime());
-  console.log('Boot Reason: ' + parser.bootReason());
-  console.log('Memory: ' + parser.memory());
-  console.log('Model: ' + parser.model());
-  console.log('Serial: ' + parser.serial());
-  console.log('Hardware: ' + parser.hardware());
-  console.log('\n');
-});
-
-fs.readFile(__dirname + '/n7k.txt', function (err, data) {
-  var parser = CiscoParse(data);
-  console.log('Device Type: ' + parser.type());
-  console.log('Version: ' + parser.version());
-  console.log('Uptime: ' + parser.uptime());
-  console.log('Boot Reason: ' + parser.bootReason());
-  console.log('Memory: ' + parser.memory());
-  console.log('Model: ' + parser.model());
-  console.log('Serial: ' + parser.serial());
-  console.log('Hardware: ' + parser.hardware());
-});
+console.log('Device Type: ' + parser.type());
+console.log('Version: ' + parser.version());
+console.log('Uptime: ' + parser.uptime());
+console.log('Boot Reason: ' + parser.bootReason());
+console.log('Memory: ' + parser.memory());
+console.log('Model: ' + parser.model());
+console.log('Serial: ' + parser.serial());
+console.log('Hardware: ' + parser.hardware());
