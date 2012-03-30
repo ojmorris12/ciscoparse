@@ -4,7 +4,7 @@
     "description": "A tool to parse output from Cisco's 'show version' command.",
     "author": "Scott Ware <scottdware@gmail.com>",
     "keywords": ["cisco", "version", "parse", "networking"],
-    "main": "ciscoparse",
+    "main": "index",
     "licenses": [{
         "type": "MIT",
         "url": "http://raw.github.com/scottdware/ciscoparse/master/LICENSE"
