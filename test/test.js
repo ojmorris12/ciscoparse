@@ -1,7 +1,7 @@
-var CiscoParse = require('../index.js'),
-    fs = require('fs'),
-    data = fs.readFileSync(__dirname + '/ios.txt', 'utf-8'),
-    parser = CiscoParse(data);
+var CiscoParse = require('../index.js');
+var fs = require('fs');
+var data = fs.readFileSync(__dirname + '/ios.txt', 'utf-8');
+var parser = new CiscoParse(data);
 
 console.log('Device Type: ' + parser.type());
 console.log('Version: ' + parser.version());
