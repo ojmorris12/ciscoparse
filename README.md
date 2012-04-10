@@ -29,7 +29,7 @@ var CiscoParse = require('ciscoparse');
 var fs = require('fs');
 
 fs.readFile('show-version.txt', function(err, data) {
-  var parser = CiscoParse(data);
+  var parser = new CiscoParse(data);
 
   console.log('Device Type: ' + parser.type());
   console.log('Version: ' + parser.version());
