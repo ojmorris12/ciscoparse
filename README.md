@@ -25,11 +25,11 @@ For example, let's say that you have the `show version` output from a device
 saved in a file called `show-version.txt`:
 
 ```javascript
-var CiscoParse = require('ciscoparse');
+var ciscoparse = require('ciscoparse');
 var fs = require('fs');
 
 fs.readFile('show-version.txt', function(err, data) {
-  var parser = new CiscoParse(data);
+  var parser = ciscoparse.parse(data);
 
   console.log('Device Type: ' + parser.type());
   console.log('Version: ' + parser.version());
