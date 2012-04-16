@@ -1,1 +1,1 @@
-module.exports = require('./lib/ciscoparse');
+module.exports = require('./lib/cp');
