@@ -57,7 +57,9 @@ Would print out the following:
 The same thing applies to the `hardware()` method.
 
 ## License
-MIT
+The MIT License
+
+Copyright (c) 2012 Scott Ware
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
