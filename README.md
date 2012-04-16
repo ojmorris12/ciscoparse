@@ -4,11 +4,11 @@ This module will parse the output from Cisco's `show version` command. There
 is a web front-end to this module as well, and it can be found
 [here](http://github.com/scottdware/node-ciscoparse).
 
-## Installation  ##
+## Installation
 
     npm install ciscoparse
 
-## Usage ##
+## Usage
 
 Information that can be parsed:
 
@@ -55,3 +55,27 @@ Would print out the following:
     Serials: CAT0000000A,CAT0000000B,CAT0000000C
 
 The same thing applies to the `hardware()` method.
+
+## License
+MIT
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
