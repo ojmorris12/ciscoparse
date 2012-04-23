@@ -1,4 +1,4 @@
-# ciscoparse #
+# ciscoparse
 
 This module will parse the output from Cisco's `show version` command. There
 is a web front-end to this module as well, and it can be found
@@ -57,7 +57,7 @@ Would print out the following:
 The same thing applies to the `hardware()` method.
 
 ## MIT License
-Copyright (c) 2012 Scott Ware
+Copyright (c) 2012 Scott Ware &lg;scottdware@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
